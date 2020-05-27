@@ -24,13 +24,23 @@
 	  layers: [
 		new ol.layer.Tile({
 		  source: new ol.source.XYZ({
-			url: 'http://tile.stamen.com/terrain/{z}/{x}/{y}.jpg'
+			//url: 'http://tile.stamen.com/terrain/{z}/{x}/{y}.jpg'
+			url: 'http://www.google.cn/maps/vt?lyrs=m@189&gl=cn&x={x}&y={y}&z={z}'
 		  })
+		}),
+		new ol.layer.VectorTile({
+		    source: new ol.source.VectorTile({
+				format: new ol.format.MVT(),
+				url: `http://localhost:9000/MapServer/vector/wmts/NewYorkBuildings/{z}/{x}/{y}`,
+				minZoom: 13,
+				maxZoom: 15
+			})
 		})
+		
 	  ],
 	  view: new ol.View({
-		center: ol.proj.fromLonLat([-117.1493, 32.6965]),
-		zoom: 12
+		center: ol.proj.fromLonLat([-75.5, 42.5]),
+		zoom: 13
 	  })
 	});
 
