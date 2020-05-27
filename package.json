@@ -1,0 +1,21 @@
+{
+  "name": "openlayers-dist",
+  "version": "1.0.0",
+  "description": "openlayers-dist",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "fonts",
+    "arcgis"
+  ],
+  "author": "projectsharevip",
+  "license": "ISC",
+  "devDependencies": {
+    
+  },
+  "dependencies": {
+    
+  }
+}
