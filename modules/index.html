@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>OpenLayers</title>
+	<link href="ol.css" rel="stylesheet">    
+    <script src="ol.js"></script>
+
+    <style>
+      html, body, #map-container {
+        margin: 0;
+        height: 100%;
+        width: 100%;
+        font-family: sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map-container"></div>
+  </body>
+  <script>
+  var map = new ol.Map({
+	  target: 'map-container',
+	  layers: [
+		new ol.layer.Tile({
+		  source: new ol.source.XYZ({
+			url: 'http://tile.stamen.com/terrain/{z}/{x}/{y}.jpg'
+		  })
+		})
+	  ],
+	  view: new ol.View({
+		center: ol.proj.fromLonLat([-117.1493, 32.6965]),
+		zoom: 12
+	  })
+	});
+
+
+  </script>
+</html>
