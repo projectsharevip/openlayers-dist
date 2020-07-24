@@ -2,7 +2,11 @@
   "name": "openlayers-dist",
   "version": "1.0.0",
   "description": "openlayers-dist",
-  "main": "index.js",
+  "main": "modules/ol.js",
+  "style": "modules/ol.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,3 +23,4 @@
     
   }
 }
+
